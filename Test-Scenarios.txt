@@ -1,0 +1,13 @@
+Test Scenarios
+
+      Login Page:
+Sign in with valid credentials
+STR
+1. Open Login Page
+2. Enter email
+3. Enter password
+4. Click "Войти" button
+
+Expected result:
+1. Open profile page
+2. Squared avatar is visible
