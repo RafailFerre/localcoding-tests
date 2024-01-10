@@ -1,7 +1,8 @@
-Test Scenarios
+*** Test Scenarios ***
 
       Login Page:
-Sign in with valid credentials
+
+ Sign in with valid credentials
 STR
 1. Open Login Page
 2. Enter email
@@ -11,3 +12,15 @@ STR
 Expected result:
 1. Open profile page
 2. Squared avatar is visible
+-----------------------------------------------------------------------------
+ Sign in with invalid credentials
+STR
+1. Open Login Page
+2. Enter email
+3. Enter invalid password
+4. Click "Войти" button
+
+Expected result:
+1. Login Page is still open
+2. Error toast is visible
+3. Error message text 'User login. Fail'
