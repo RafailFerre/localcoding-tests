@@ -24,3 +24,51 @@ Expected result:
 1. Login Page is still open
 2. Error toast is visible
 3. Error message text 'User login. Fail'
+-----------------------------------------------------------------------------
+ Sign in validation email field and password field
+STR
+1. Open Login Page ->
+ Expected result:
+  1. Email field is empty
+  2. Password field is empty
+  3. "Войти" button is disabled
+
+2. Enter "test" in email field ->
+ Expected result:
+  1. Error message "'email' is not a valid email" is visible
+  2. "Войти" button is disabled
+
+3. Enter "test@" in email field ->
+ Expected result:
+  1. Error message "'email' is not a valid email" is visible
+  2. "Войти" button is disabled
+
+4. Enter "test@email" in email field ->
+ Expected result:
+  1. Error message "'email' is not a valid email" is visible
+  2. "Войти" button is disabled
+
+5. Enter "test@email." in email field ->
+ Expected result:
+  1. Error message "'email' is not a valid email" is visible
+  2. "Войти" button is disabled
+
+6. Enter "test@email.com" in email field ->
+ Expected result:
+  1. Error not exist. Email is valid
+  2. "Войти" button is disabled
+
+7. Enter "test123" in password field -<
+ Expected result:
+  1. Error not exist. All characters accepted
+  2. "Войти" button is enabled
+
+8. Clear email field
+ Expected result:
+  1. Error message 'Required' is visible
+  2. "Войти" button is disabled
+
+8. Clear password field
+ Expected result:
+  1. Error message 'Required' is visible
+  2. "Войти" button is disabled
