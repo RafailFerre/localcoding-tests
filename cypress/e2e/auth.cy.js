@@ -1,6 +1,6 @@
 describe('Authorization', () => {
     beforeEach(() => {
-        cy.visit('https://coding.pasv.us/user/login')
+        cy.visit('/user/login')
     })
 
     it('Sign in with valid credentials', () => {
