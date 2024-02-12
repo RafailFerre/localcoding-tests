@@ -10,7 +10,10 @@ describe('Authorization', () => {
         cy.get('.login-form-button').should('be.enabled')
         cy.get('.login-form-button').click()
 
-        cy.url().should('eq', 'https://coding.pasv.us/profile/62ec1c48a86ef3cf6d2be322')
+        cy.url().should(
+            'eq',
+            'https://coding.pasv.us/profile/62ec1c48a86ef3cf6d2be322'
+        )
         cy.get('.ant-avatar-square').should('be.visible')
     })
 
