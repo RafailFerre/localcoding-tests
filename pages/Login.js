@@ -7,6 +7,10 @@ class Login {
         cy.get(this.passwordSelector).type(Cypress.env('password'))
         cy.get(this.buttonSubmitSelector).should('be.enabled').click()
     }
+
+    visit() {
+        cy.visit('/user/login')
+    }
 }
 
 export const LoginPage = new Login()

@@ -2,12 +2,14 @@ import { LoginPage } from '../../pages/Login'
 
 describe('Authorization', () => {
     beforeEach(() => {
-        cy.visit('/user/login')
+        LoginPage.visit()
+        // cy.visit('/user/login')
     })
 
     it.only('Sign in with valid credentials', () => {
+        cy.login(Cypress.env('email'), Cypress.env('password'))
         //cy.visit('https://coding.pasv.us/user/login')
-        LoginPage.login()
+        // LoginPage.login()
         // cy.get('#normal_login_email').type(Cypress.env('email'))
         // cy.get('#normal_login_password').type(Cypress.env('password'))
         // cy.get('.login-form-button').should('be.enabled')

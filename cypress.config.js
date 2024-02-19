@@ -8,6 +8,8 @@ module.exports = defineConfig({
             'cypress/e2e/2-advanced-examples/*',
         ],
         watchForFileChanges: false,
+        viewportWidth: 1200,
+        viewportHeight: 700,
         // setupNodeEvents(on, config) {
         //   // implement node event listeners here
         // },
