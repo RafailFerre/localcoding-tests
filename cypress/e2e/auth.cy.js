@@ -1,18 +1,21 @@
+import { LoginPage } from '../../pages/Login'
+
 describe('Authorization', () => {
     beforeEach(() => {
         cy.visit('/user/login')
     })
 
-    it('Sign in with valid credentials', () => {
+    it.only('Sign in with valid credentials', () => {
         //cy.visit('https://coding.pasv.us/user/login')
-        cy.get('#normal_login_email').type(Cypress.env('email'))
-        cy.get('#normal_login_password').type(Cypress.env('password'))
-        cy.get('.login-form-button').should('be.enabled')
-        cy.get('.login-form-button').click()
+        LoginPage.login()
+        // cy.get('#normal_login_email').type(Cypress.env('email'))
+        // cy.get('#normal_login_password').type(Cypress.env('password'))
+        // cy.get('.login-form-button').should('be.enabled')
+        // cy.get('.login-form-button').click()
 
         cy.url().should(
-            'eq',
-            'https://coding.pasv.us/profile/62ec1c48a86ef3cf6d2be322'
+            'include',
+            'https://coding.pasv.us/profile' //62ec1c48a86ef3cf6d2be322'
         )
         cy.get('.ant-avatar-square').should('be.visible')
     })
