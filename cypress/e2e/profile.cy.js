@@ -4,6 +4,8 @@ import { LoginPage } from '../../pages/Login'
 describe('Profile', () => {
     beforeEach(() => {
         cy.login(Cypress.env('email'), Cypress.env('password'))
+        // cy.loginByToken()
+        // cy.visit(`/profile/${Cypress.env('userId')}`)
         // LoginPage.visit()
         // LoginPage.login()
     })
