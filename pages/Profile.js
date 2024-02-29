@@ -1,6 +1,11 @@
-class Profile {
+import { BasePage } from './Base'
+
+class Profile extends BasePage {
     userNameDropdownSelector = '.ms-2.me-2'
     logOutButtonSelector = '[data-qa="logout"]'
+    get imageAvatar() {
+        return cy.get('.ant-avatar-square')
+    }
 
     logOut() {
         cy.get(this.userNameDropdownSelector).click()
