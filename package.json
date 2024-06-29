@@ -11,7 +11,8 @@
     "author": "Rafail Ferre",
     "license": "ISC",
     "dependencies": {
-        "cypress": "^13.6.2"
+        "cypress": "^13.6.2",
+        "dotenv": "^16.4.5"
     },
     "devDependencies": {
         "prettier": "3.2.4"

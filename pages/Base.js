@@ -3,4 +3,4 @@ class Base {
         return cy.get('.ant-notification-notice-message')
     }
 }
-export const BasePage = Base
+export const BasePage = Base;
