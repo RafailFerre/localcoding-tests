@@ -1,9 +1,9 @@
 before(() => {
     cy.request('POST', 'https://server-prod.pasv.us/user/login', {
-        email: Cypress.env('email'),
-        password: Cypress.env('password'),
+        email: process.env.EMAIL,
+        password: process.env.PASSWORD
     }).then((response) => {
         Cypress.env('token', response.body.payload.token)
-        Cypress.env('userId', response.body.payload.userId)
+        Cypress.env('userId', response.body.payload.user._id)
     })
 })
