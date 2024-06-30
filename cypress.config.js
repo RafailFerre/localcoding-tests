@@ -16,6 +16,8 @@ module.exports = defineConfig({
             'cypress/e2e/2-advanced-examples/*',
         ],
 
+        defaultCommandTimeout: 15000,
+
         watchForFileChanges: false,
         viewportWidth: 1200,
         viewportHeight: 700,

@@ -14,6 +14,8 @@ describe('Profile', () => {
     })
     it('Sign out', () => {
         ProfilePage.logOut()
+
+        cy.location('pathname').should('eq', '/')
         // cy.get(this.userNameDropdownSelector).click()
         // cy.get(this.logOutButtonSelector).click()
         // cy.location('pathname').should('eq', '/')
