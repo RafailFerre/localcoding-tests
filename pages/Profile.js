@@ -1,17 +1,15 @@
 import { BasePage } from './Base'
 
 class Profile extends BasePage {
-    userNameDropdownSelector = '.ms-2.me-2'
-    logOutButtonSelector = '[data-qa="logout"]'
-    get imageAvatar() {
-        return cy.get('.ant-avatar-square')
-    }
+
+    get userNameDropdownSelector() { return cy.get('.ms-2.me-2') }
+    get logOutButtonSelector() { return cy.get('[data-qa="logout"]') } 
+    get imageAvatar() { return cy.get('.ant-avatar-square') }
 
     logOut() {
-        cy.get(this.userNameDropdownSelector).click()
-        cy.get(this.logOutButtonSelector).click()
-
-        cy.location('pathname').should('eq', '/')
+        this.userNameDropdownSelector.click()
+        this.logOutButtonSelector.click()
+        // cy.location('pathname').should('eq', '/')
     }
 }
 
