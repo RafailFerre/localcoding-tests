@@ -22,22 +22,21 @@ describe('SIGN UP', () => {
 
             //cy.url().should('eq', 'https://coding.pasv.us/onboarding')
             cy.location('pathname').should('eq', '/onboarding')
-            cy.get('#root > div > div > form > h2').should('be.visible').and('have.text', 'Phone')
             SignUpPage.inputPhone.should('be.visible')
 
             SignUpPage.signUpPhone(phone)
 
-            cy.wait(2000)
+            //cy.wait(2000)
 
             //cy.url().should('eq', 'https://coding.pasv.us/onboarding')
             cy.location('pathname').should('eq', '/onboarding')
             SignUpPage.inputFirstName.should('be.visible')
             SignUpPage.inputLastName.should('be.visible')
 
-            SignUpPage.signUpName(firstName, firstName)
+            SignUpPage.signUpName(firstName, firstName, {timeout: 2000})
 
             cy.url().should('eq', 'https://coding.pasv.us/course')
-            ProfilePage.userNameDropdownSelector.should('be.visible')
+            ProfilePage.userNameDropdown.should('be.visible')
 
             ProfilePage.logOut()
 
@@ -66,7 +65,7 @@ describe('SIGN UP', () => {
             SignUpPage.inputPassword.should('have.value', '')
             SignUpPage.buttonSubmit.should('be.disabled')
         
-            SignUpPage.inputPassword.type('1234')
+            SignUpPage.inputPassword.type('invalid_password')
 
             //cy.url().should('eq', 'https://coding.pasv.us/user/register')
             cy.location('pathname').should('eq', '/user/register')

@@ -5,7 +5,8 @@
     "scripts": {
         "cy:open": "cypress open",
         "cy:run": "cypress run",
-        "prettier": "npx prettier . --write"
+        "format": "npx prettier ./ --write --list-different",
+        "lint": "prettier ./ --check"
     },
     "keywords": [],
     "author": "Rafail Ferre",
