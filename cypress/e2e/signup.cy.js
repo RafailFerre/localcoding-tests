@@ -26,7 +26,7 @@ describe('SIGN UP', () => {
 
             SignUpPage.signUpPhone(phone)
 
-            //cy.wait(2000)
+            cy.wait(2000)
 
             //cy.url().should('eq', 'https://coding.pasv.us/onboarding')
             cy.location('pathname').should('eq', '/onboarding')

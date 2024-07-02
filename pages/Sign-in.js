@@ -8,7 +8,8 @@ class SignIn extends BasePage {
     get labelValidationPassword() { return cy.get('#normal_login_password_help') }
 
     visit() {
-        cy.visit(`${Cypress.env('BASE_URL')}/user/login`)
+        cy.visit('/user/login')
+        // cy.visit(`${Cypress.env('BASE_URL')}/user/login`)
     }
 
     signIn(email, password) {
