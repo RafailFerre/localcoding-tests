@@ -6,6 +6,7 @@ class SignUpPage extends BasePage {
  get inputPassword() { return cy.get('#user_register_password') }
  get inputCheckbox() { return cy.get('#user_register_agreement') }
  get buttonSubmit() { return cy.get('[type="submit"]') }
+ 
  get labelValidationEmail() { return cy.get('#user_register_email_help') }
  get labelValidationPassword() { return cy.get('#user_register_password_help') }
 
