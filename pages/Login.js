@@ -10,8 +10,8 @@ class Login extends BasePage {
         // cy.visit(`${Cypress.env('BASE_URL')}/user/login`)
     }
     login() {
-        cy.get(this.inputEmail).type(`${Cypress.env('EMAIL')}`)
-        cy.get(this.inputPassword).type(`${Cypress.env('PASSWORD')}`)
+        cy.get(this.inputEmail).type(Cypress.env('EMAIL'))
+        cy.get(this.inputPassword).type(Cypress.env('PASSWORD'))
         cy.get(this.buttonSubmit).should('be.enabled').click()
     }
     // loginInvalidPassword() {

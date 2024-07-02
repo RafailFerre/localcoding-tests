@@ -9,7 +9,7 @@ describe('Authorization', () => {
             // LoginPage.visit()
         })
         it('Sign in with valid credentials', () => {
-            SignInPage.signIn(`${Cypress.env('EMAIL')}`, `${Cypress.env('PASSWORD')}`)
+            SignInPage.signIn(Cypress.env('EMAIL'), Cypress.env('PASSWORD'))
             // cy.login() // custom command
             // LoginPage.login()
             // cy.get('#normal_login_email').type(Cypress.env('email'))
@@ -28,7 +28,7 @@ describe('Authorization', () => {
             SignInPage.visit()
         })
         it('Sign in with invalid credentials', () => {
-            SignInPage.signIn(`${Cypress.env('EMAIL')}`, 'invalid_password')
+            SignInPage.signIn(Cypress.env('EMAIL'), 'invalid_password')
 
             cy.url().should('eq', 'https://coding.pasv.us/user/login')
 

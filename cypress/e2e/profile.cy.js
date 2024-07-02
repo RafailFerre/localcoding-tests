@@ -4,7 +4,7 @@ import { ProfilePage } from '../../pages/Profile'
 
 describe('Profile', () => {
     beforeEach(() => {
-        cy.login(`${Cypress.env('EMAIL')}`, `${Cypress.env('PASSWORD')}`) // custom command
+        cy.login(Cypress.env('EMAIL'), Cypress.env('PASSWORD')) // custom command
         cy.intercept({ resourceType: /xhr|fetch/ }, { log: false })
         // cy.loginByToken()
         // cy.visit(`${Cypress.env('BASE_URL')}/profile/${Cypress.env('userId')}`)
