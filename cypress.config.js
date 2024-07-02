@@ -3,7 +3,7 @@ const dotenv = require('dotenv').config()
 
 module.exports = defineConfig({
     e2e: {
-        // baseUrl: 'https://coding.pasv.us',
+        baseUrl: process.env.BASE_URL,
 
         env: {
             BASE_URL: process.env.BASE_URL,
