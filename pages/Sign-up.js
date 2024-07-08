@@ -1,6 +1,6 @@
 import { BasePage } from '../pages/Base'
 
-class SignUpPage extends BasePage {
+class SignUp extends BasePage {
     get inputEmail() { return cy.get('#user_register_email') }
     get inputPassword() { return cy.get('#user_register_password') }
     get inputCheckbox() { return cy.get('#user_register_agreement') }
@@ -38,4 +38,4 @@ class SignUpPage extends BasePage {
     }
 }
 
-export default new SignUpPage()
+export const SignUpPage = new SignUp()
