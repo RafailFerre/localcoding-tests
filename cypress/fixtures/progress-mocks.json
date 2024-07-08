@@ -1,0 +1,25 @@
+{
+    "message": "Get courses progress",
+    "success": true,
+    "fail": false,
+    "payload": [
+        {
+            "_id": "668b35a921c854b999c6a8a5",
+            "completedLessons": 141,
+            "totalLessons": 141,
+            "course": {
+                "_id": "635c05ba659f6d77abf1f4e7",
+                "name": "MOCK TESTING - JavaScript Syntax"
+            }
+        },
+        {
+            "_id": "668b361721c854b999c6aa11",
+            "completedLessons": 58,
+            "totalLessons": 115,
+            "course": {
+                "_id": "5ff2005cacc2d5003ae26bc7",
+                "name": "MOCK TESTING - QA Manual"
+            }
+        }
+    ]
+}
