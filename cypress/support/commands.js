@@ -26,22 +26,20 @@
 
 // import { LoginPage } from "../../pages/Login";
 
-import { SignInPage } from "../../pages/Sign-in"
+import { SignInPage } from '../../pages'
 Cypress.Commands.add('login', (email, password) => {
-    SignInPage.visit()
-    SignInPage.signIn(email, password)
-    // cy.visit(`${Cypress.env('BASE_URL')}/user/login`)
-    // cy.get('#normal_login_email').type(email)
-    // cy.get('#normal_login_password').type(password)
-    // cy.get('.login-form-button').click()
-    // LoginPage.visit()
+  SignInPage.visit()
+  SignInPage.signIn(email, password)
+  // cy.visit(`${Cypress.env('BASE_URL')}/user/login`)
+  // cy.get('#normal_login_email').type(email)
+  // cy.get('#normal_login_password').type(password)
+  // cy.get('.login-form-button').click()
+  // LoginPage.visit()
 })
 
-
-
 Cypress.Commands.add('loginByToken', (token, userId) => {
-    cy.visit('/')
-    window.localStorage.setItem('token', Cypress.env('token'))
-    window.localStorage.setItem('userId', Cypress.env('userId'))
-    window.localStorage.setItem('lang', 'en')
+  cy.visit('/')
+  window.localStorage.setItem('token', Cypress.env('token'))
+  window.localStorage.setItem('userId', Cypress.env('userId'))
+  window.localStorage.setItem('lang', 'en')
 })
