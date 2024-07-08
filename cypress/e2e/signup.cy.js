@@ -40,6 +40,7 @@ describe('SIGN UP', () => {
       cy.location('pathname').should('eq', '/')
     })
   })
+
   describe('NEGATIVE', () => {
     beforeEach(() => {
       SignUpPage.visit()
