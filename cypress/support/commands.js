@@ -37,9 +37,9 @@ Cypress.Commands.add('login', (email, password) => {
   // LoginPage.visit()
 })
 
-Cypress.Commands.add('loginByToken', (token, userId) => {
+Cypress.Commands.add('loginByApi', () => {
   cy.visit('/')
-  window.localStorage.setItem('token', Cypress.env('token'))
+  //window.cookies.setItem('connect.sid', Cypress.env('Cookie'))
   window.localStorage.setItem('userId', Cypress.env('userId'))
   window.localStorage.setItem('lang', 'en')
 })
