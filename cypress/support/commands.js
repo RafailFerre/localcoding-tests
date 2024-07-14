@@ -41,5 +41,5 @@ Cypress.Commands.add('loginByApi', () => {
   cy.visit('/')
   //window.cookies.setItem('connect.sid', Cypress.env('Cookie'))
   window.localStorage.setItem('userId', Cypress.env('userId'))
-  window.localStorage.setItem('lang', 'en')
+  window.localStorage.setItem('lang', 'ru')
 })
